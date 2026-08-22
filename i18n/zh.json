@@ -7,14 +7,16 @@
     "features": "功能",
     "faq": "知识库",
     "privacy": "隐私",
+    "blog": "博客",
     "langSwitch": "English"
   },
   "hero": {
-    "badge": "现已登陆 iOS",
+    "badge": "100% 免费 — 现已登陆 iOS",
     "title": "与月亮同步，感受你的内在四季。",
-    "subtitle": "Luna Sync 将你的生理周期映射到月相变化中——以隐私优先的智能方式，揭示你的内在节奏。",
-    "cta": "在 App Store 下载",
-    "trust": "你的数据永远不会离开设备。端到端加密。"
+    "subtitle": "Luna Sync 将你的生理周期映射到月相变化中——以隐私优先的智能方式，揭示你的内在节奏。完全免费，无付费墙，无订阅。",
+    "cta": "在 App Store 免费下载",
+    "trust": "你的数据永远不会离开设备。端到端加密。无隐藏费用。",
+    "freeTag": "100% 免费 · 无付费墙 · 无隐藏订阅"
   },
   "features": {
     "heading": "为你的节奏而设计",
@@ -77,12 +79,24 @@
     "title": "为什么隐私如此重要",
     "text": "你的健康数据属于你自己。大多数周期追踪 App 将私密的健康数据发送到外部服务器——有些甚至卖给广告商。Luna Sync 的设计理念截然不同：一切留在你的设备上。我们使用 AES-256 加密，无需云账户、没有分析 SDK、不收集任何数据。Luna Sync 无需网络连接即可使用——下载一次后完全离线运行。你的身体、你的数据、你的 iPhone。"
   },
+  "comparison": {
+    "heading": "Luna Sync vs. 传统经期 App",
+    "rows": [
+      { "feature": "价格", "traditional": "每月 10–20 USD 订阅费", "luna": "100% 免费 · 无付费墙" },
+      { "feature": "数据隐私", "traditional": "数据上传至云端服务器", "luna": "本地优先 · 仅存储在设备" },
+      { "feature": "广告与追踪", "traditional": "医疗广告 & 分析 SDK", "luna": "零广告 · 无追踪 SDK" },
+      { "feature": "月相同步", "traditional": "无此功能", "luna": "8 月相可视化" },
+      { "feature": "离线模式", "traditional": "需要网络连接", "luna": "100% 离线可用" },
+      { "feature": "账户注册", "traditional": "需注册账户 & 邮箱", "luna": "无需账户" }
+    ]
+  },
   "footer": {
     "tagline": "与你的周期和谐共处。",
     "links": {
       "privacy": "隐私政策",
       "terms": "使用条款",
-      "disclaimer": "医疗免责声明"
+      "disclaimer": "医疗免责声明",
+      "blog": "博客"
     },
     "copyright": "© 2026 Luna Sync. 保留所有权利。"
   },

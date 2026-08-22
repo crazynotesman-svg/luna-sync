@@ -40,11 +40,13 @@
     "name": "Luna Sync",
     "operatingSystem": "iOS 16.0+",
     "applicationCategory": "HealthApplication",
-    "description": "Privacy-first cycle tracking synced to lunar phases. Understand your inner seasons with on-device intelligence.",
+    "description": "Free, privacy-first cycle tracking synced to lunar phases. 100% free, no paywall, no subscriptions. Understand your inner seasons with on-device intelligence.",
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "USD",
+      "priceValidUntil": "2030-12-31",
+      "description": "Luna Sync is completely free with no paywalls, no subscriptions, and no hidden charges."
     },
     "author": {
       "@type": "Organization",
@@ -454,8 +456,10 @@
       </div>
       <div class="flex items-center gap-6 text-sm">
         <a href="#features" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.features" style="color: rgba(255,255,255,0.6);">Features</a>
+        <a href="#comparison" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.faq" style="color: rgba(255,255,255,0.6);">Compare</a>
         <a href="#faq" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.faq" style="color: rgba(255,255,255,0.6);">FAQ</a>
         <a href="#privacy" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.privacy" style="color: rgba(255,255,255,0.6);">Privacy</a>
+        <a href="/blog/cyclical-living-guide.html" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.blog" style="color: rgba(255,255,255,0.6);">Blog</a>
         <!-- Language dropdown -->
         <div class="relative" id="lang-dropdown">
           <button id="lang-current-btn" onclick="toggleLangDropdown()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all" style="background: rgba(255,255,255,0.06); color: var(--silver); border: 1px solid rgba(255,255,255,0.08);">
@@ -504,8 +508,14 @@
             </a>
 
             <p class="text-xs" style="color: rgba(255, 255, 255, 0.35);" data-i18n="hero.trust">
-              Your data never leaves your device. End-to-end encrypted.
+              Your data never leaves your device. End-to-end encrypted. No hidden costs.
             </p>
+
+            <!-- Free tag -->
+            <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium" style="background: rgba(124, 111, 170, 0.12); color: var(--accent); border: 1px solid rgba(124, 111, 170, 0.2);">
+              <span>✦</span>
+              <span data-i18n="hero.freeTag">100% Free · No Paywall · No Hidden Subscriptions</span>
+            </div>
           </div>
 
           <!-- Right: Screenshot carousel -->
@@ -566,6 +576,60 @@
             <h3 class="text-xl font-display font-semibold mt-3 mb-2" style="color: var(--silver);" data-i18n-feat-title>Private by Design</h3>
             <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-feat-desc>All health data encrypted and stored locally.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- COMPARISON MATRIX                        -->
+    <!-- ════════════════════════════════════════ -->
+    <section id="comparison" class="py-24" style="background: rgba(11, 13, 23, 1);">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="font-display text-3xl md:text-4xl text-center mb-4 gradient-text" data-i18n="comparison.heading">Luna Sync vs. Traditional Period Apps</h2>
+        <div class="section-divider w-24 mx-auto mb-12"></div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm" id="comparison-table">
+            <thead>
+              <tr>
+                <th class="text-left py-4 px-4 font-semibold" style="color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.06);"></th>
+                <th class="text-left py-4 px-4 font-medium" style="color: rgba(255,255,255,0.35); border-bottom: 1px solid rgba(255,255,255,0.06);" data-i18n="comparison.rows.0.traditional">Traditional Period Apps</th>
+                <th class="text-left py-4 px-4 font-medium" style="color: var(--silver); border-bottom: 1px solid rgba(124,111,170,0.2);" data-i18n="comparison.rows.0.luna">Luna Sync</th>
+              </tr>
+            </thead>
+            <tbody data-i18n-comparison="comparison.rows">
+              <tr data-i18n-comp-index="0" class="transition-all" style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td class="py-3.5 px-4 font-semibold text-xs" style="color: rgba(255,255,255,0.5); letter-spacing: 0.05em;" data-i18n-comp-feat>Price</td>
+                <td class="py-3.5 px-4" style="color: rgba(255,255,255,0.3);" data-i18n-comp-trad>10–20 USD/month subscription</td>
+                <td class="py-3.5 px-4" style="color: var(--accent);" data-i18n-comp-luna>100% Free · No Paywall</td>
+              </tr>
+              <tr data-i18n-comp-index="1" style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td class="py-3.5 px-4 font-semibold text-xs" style="color: rgba(255,255,255,0.5); letter-spacing: 0.05em;" data-i18n-comp-feat>Data Privacy</td>
+                <td class="py-3.5 px-4" style="color: rgba(255,255,255,0.3);" data-i18n-comp-trad>Data uploaded to cloud servers</td>
+                <td class="py-3.5 px-4" style="color: var(--accent);" data-i18n-comp-luna>Local-First · On-Device Only</td>
+              </tr>
+              <tr data-i18n-comp-index="2" style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td class="py-3.5 px-4 font-semibold text-xs" style="color: rgba(255,255,255,0.5); letter-spacing: 0.05em;" data-i18n-comp-feat>Ads & Tracking</td>
+                <td class="py-3.5 px-4" style="color: rgba(255,255,255,0.3);" data-i18n-comp-trad>Medical ads & analytics SDKs</td>
+                <td class="py-3.5 px-4" style="color: var(--accent);" data-i18n-comp-luna>Zero Ads · No Tracking SDKs</td>
+              </tr>
+              <tr data-i18n-comp-index="3" style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td class="py-3.5 px-4 font-semibold text-xs" style="color: rgba(255,255,255,0.5); letter-spacing: 0.05em;" data-i18n-comp-feat>Moon Sync</td>
+                <td class="py-3.5 px-4" style="color: rgba(255,255,255,0.3);" data-i18n-comp-trad>Not available</td>
+                <td class="py-3.5 px-4" style="color: var(--accent);" data-i18n-comp-luna>8 Lunar Phase Visualization</td>
+              </tr>
+              <tr data-i18n-comp-index="4" style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td class="py-3.5 px-4 font-semibold text-xs" style="color: rgba(255,255,255,0.5); letter-spacing: 0.05em;" data-i18n-comp-feat>Offline Mode</td>
+                <td class="py-3.5 px-4" style="color: rgba(255,255,255,0.3);" data-i18n-comp-trad>Requires internet connection</td>
+                <td class="py-3.5 px-4" style="color: var(--accent);" data-i18n-comp-luna>Works 100% Offline</td>
+              </tr>
+              <tr data-i18n-comp-index="5">
+                <td class="py-3.5 px-4 font-semibold text-xs" style="color: rgba(255,255,255,0.5); letter-spacing: 0.05em;" data-i18n-comp-feat>Account Required</td>
+                <td class="py-3.5 px-4" style="color: rgba(255,255,255,0.3);" data-i18n-comp-trad>Account & email sign-up</td>
+                <td class="py-3.5 px-4" style="color: var(--accent);" data-i18n-comp-luna>No Account Needed</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -724,6 +788,7 @@
           <span class="font-display text-sm" data-i18n="footer.tagline" style="color: rgba(255,255,255,0.4);">In harmony with your cycle.</span>
         </div>
         <div class="flex gap-6 text-sm">
+          <a href="/blog/cyclical-living-guide.html" class="footer-link" data-i18n="footer.links.blog">Blog</a>
           <a href="https://luna.100ideas.net/privacy" class="footer-link" data-i18n="footer.links.privacy">Privacy Policy</a>
           <a href="https://luna.100ideas.net/terms" class="footer-link" data-i18n="footer.links.terms">Terms of Use</a>
           <a href="https://luna.100ideas.net/disclaimer" class="footer-link" data-i18n="footer.links.disclaimer">Medical Disclaimer</a>

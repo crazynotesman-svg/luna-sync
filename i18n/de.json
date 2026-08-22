@@ -7,14 +7,16 @@
     "features": "Features",
     "faq": "Wissen",
     "privacy": "Datenschutz",
+    "blog": "Blog",
     "langSwitch": "English"
   },
   "hero": {
-    "badge": "Jetzt für iOS verfügbar",
+    "badge": "100% Kostenlos — Jetzt für iOS verfügbar",
     "title": "Lebe im Einklang mit dem Mond.",
-    "subtitle": "Luna Sync verbindet Deinen Zyklus mit den Mondphasen — und zeigt Dir Deine inneren Jahreszeiten mit datenschutzfreundlicher Intelligenz.",
-    "cta": "Im App Store laden",
-    "trust": "Deine Daten verlassen nie Dein Gerät. Ende-zu-Ende verschlüsselt."
+    "subtitle": "Luna Sync verbindet Deinen Zyklus mit den Mondphasen — und zeigt Dir Deine inneren Jahreszeiten mit datenschutzfreundlicher Intelligenz. 100% kostenlos, keine Paywall, keine Abos.",
+    "cta": "Im App Store laden — Kostenlos",
+    "trust": "Deine Daten verlassen nie Dein Gerät. Ende-zu-Ende verschlüsselt. Keine versteckten Kosten.",
+    "freeTag": "100% Kostenlos · Keine Paywall · Keine versteckten Abos"
   },
   "features": {
     "heading": "Entworfen für Deinen Rhythmus",
@@ -77,12 +79,24 @@
     "title": "Warum Datenschutz wichtig ist",
     "text": "Deine Gesundheit gehört Dir. Deine Daten auch. Die meisten Zyklus-Tracker senden persönliche Gesundheitsdaten auf externe Server — einige verkaufen sie sogar an Werbetreibende. Luna Sync wurde nach einem anderen Prinzip entwickelt: Alles bleibt auf Deinem Gerät. Wir verwenden AES-256-Verschlüsselung, kein Cloud-Konto, keine Analyse-SDKs, keine Datenerfassung. Luna Sync benötigt keine Internetverbindung zum Funktionieren. Lade die App einmal herunter und sie funktioniert vollständig offline. Dein Körper, Deine Daten, Dein Gerät."
   },
+  "comparison": {
+    "heading": "Luna Sync vs. Traditionelle Zyklus-Apps",
+    "rows": [
+      { "feature": "Preis", "traditional": "10–20 USD/Monat Abo", "luna": "100% Kostenlos · Keine Paywall" },
+      { "feature": "Datenschutz", "traditional": "Daten in der Cloud", "luna": "Lokal · Nur auf Deinem Gerät" },
+      { "feature": "Werbung & Tracking", "traditional": "Medizin-Werbung & Analyse-SDKs", "luna": "Keine Werbung · Kein Tracking" },
+      { "feature": "Mond-Synchronisation", "traditional": "Nicht verfügbar", "luna": "8 Mondphasen Visualisierung" },
+      { "feature": "Offline-Modus", "traditional": "Internet erforderlich", "luna": "100% Offline nutzbar" },
+      { "feature": "Konto erforderlich", "traditional": "Konto & E-Mail Registrierung", "luna": "Kein Konto nötig" }
+    ]
+  },
   "footer": {
     "tagline": "Im Einklang mit Deinem Zyklus.",
     "links": {
       "privacy": "Datenschutzerklärung",
       "terms": "Nutzungsbedingungen",
-      "disclaimer": "Medizinischer Haftungsausschluss"
+      "disclaimer": "Medizinischer Haftungsausschluss",
+      "blog": "Blog"
     },
     "copyright": "© 2026 Luna Sync. Alle Rechte vorbehalten."
   },

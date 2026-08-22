@@ -7,14 +7,16 @@
     "features": "Features",
     "faq": "FAQ",
     "privacy": "Privacy",
+    "blog": "Blog",
     "langSwitch": "中文"
   },
   "hero": {
-    "badge": "Now Available on iOS",
+    "badge": "100% Free — Now Available on iOS",
     "title": "Live in sync with the moon.",
-    "subtitle": "Luna Sync maps your cycle to lunar phases — revealing your inner seasons with privacy-first intelligence.",
-    "cta": "Download on the App Store",
-    "trust": "Your data never leaves your device. End-to-end encrypted."
+    "subtitle": "Luna Sync maps your cycle to lunar phases — revealing your inner seasons with privacy-first intelligence. 100% free, no paywall, no subscriptions.",
+    "cta": "Download on the App Store — Free",
+    "trust": "Your data never leaves your device. End-to-end encrypted. No hidden costs.",
+    "freeTag": "100% Free · No Paywall · No Hidden Subscriptions"
   },
   "features": {
     "heading": "Designed for your rhythm",
@@ -77,12 +79,24 @@
     "title": "Why Privacy Matters",
     "text": "Your health data belongs to you. Most cycle tracking apps send intimate health data to external servers — some even sell it to advertisers. Luna Sync was built differently: everything stays on your device. We use AES-256 encryption, no cloud accounts, no analytics SDKs, no data collection. Luna Sync doesn't need an internet connection to function — download once and it works fully offline. Your body, your data, your iPhone."
   },
+  "comparison": {
+    "heading": "Luna Sync vs. Traditional Period Apps",
+    "rows": [
+      { "feature": "Price", "traditional": "10–20 USD/month subscription", "luna": "100% Free · No Paywall" },
+      { "feature": "Data Privacy", "traditional": "Data uploaded to cloud servers", "luna": "Local-First · On-Device Only" },
+      { "feature": "Ads & Tracking", "traditional": "Medical ads & analytics SDKs", "luna": "Zero Ads · No Tracking SDKs" },
+      { "feature": "Moon Sync", "traditional": "Not available", "luna": "8 Lunar Phase Visualization" },
+      { "feature": "Offline Mode", "traditional": "Requires internet connection", "luna": "Works 100% Offline" },
+      { "feature": "Account Required", "traditional": "Account & email sign-up", "luna": "No Account Needed" }
+    ]
+  },
   "footer": {
     "tagline": "In harmony with your cycle.",
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
-      "disclaimer": "Medical Disclaimer"
+      "disclaimer": "Medical Disclaimer",
+      "blog": "Blog"
     },
     "copyright": "© 2026 Luna Sync. All rights reserved."
   },

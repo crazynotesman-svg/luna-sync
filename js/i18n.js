@@ -172,6 +172,32 @@
         }
       });
     });
+
+    // Build comparison matrix from dict
+    document.querySelectorAll('[data-i18n-comparison]').forEach(el => {
+      const keys = el.getAttribute('data-i18n-comparison').split('.');
+      let rows = dict;
+      for (const key of keys) rows = rows?.[key];
+      if (!Array.isArray(rows)) return;
+
+      // Update header row
+      const headerTrad = el.closest('table')?.querySelector('thead th:nth-child(2)');
+      const headerLuna = el.closest('table')?.querySelector('thead th:nth-child(3)');
+      if (headerTrad && rows[0]) headerTrad.textContent = rows[0].traditional;
+      if (headerLuna && rows[0]) headerLuna.textContent = rows[0].luna;
+
+      const children = el.children;
+      rows.forEach((row, i) => {
+        if (children[i]) {
+          const featEl = children[i].querySelector('[data-i18n-comp-feat]');
+          const tradEl = children[i].querySelector('[data-i18n-comp-trad]');
+          const lunaEl = children[i].querySelector('[data-i18n-comp-luna]');
+          if (featEl) featEl.textContent = row.feature;
+          if (tradEl) tradEl.textContent = row.traditional;
+          if (lunaEl) lunaEl.textContent = row.luna;
+        }
+      });
+    });
   }
 
   // ─── Init ───
