@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Luna Sync helps you understand your menstrual cycle through the lens of lunar phases. Privacy-first, medically-informed, beautifully minimal." />
+  <meta name="theme-color" content="#0b0d17" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Luna Sync — Track Your Cycle in Harmony with the Moon" />
+  <meta property="og:description" content="Privacy-first cycle tracking synced to lunar phases. No cloud, no accounts, no tracking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lunasync.app" />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Luna Sync" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luna Sync — Track Your Cycle in Harmony with the Moon" />
+  <meta name="twitter:description" content="Privacy-first cycle tracking synced to lunar phases." />
+  <meta name="twitter:image" content="/assets/og-image.png" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://lunasync.app/en/" />
+  <link rel="alternate" hreflang="zh" href="https://lunasync.app/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://lunasync.app/en/" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://lunasync.app/en/" />
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Luna Sync",
+    "operatingSystem": "iOS 16.0+",
+    "applicationCategory": "HealthApplication",
+    "description": "Privacy-first cycle tracking synced to lunar phases. Understand your inner seasons with on-device intelligence.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "100BadIdeas",
+      "url": "https://100ideas.net"
+    },
+    "privacyPolicy": "https://lunasync.app/privacy",
+    "termsOfService": "https://lunasync.app/terms",
+    "url": "https://lunasync.app"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is my menstrual cycle really linked to the moon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research suggests a statistical correlation between lunar phases and menstrual onset. A 2021 study in Science Advances found that periods often synchronize with new or full moons. Luna Sync helps you explore this connection with your own data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Luna Sync protect my health data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All data is encrypted using AES-256 and stored exclusively on-device. Luna Sync has no servers, no cloud storage, no analytics SDKs. We do not collect, share, or sell any personal information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 'Inner Seasons' of the menstrual cycle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The menstrual cycle is divided into four phases: Inner Spring (follicular), Summer (ovulation), Autumn (luteal), Winter (menstruation). Luna Sync visualizes your cycle through this seasonal lens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Luna Sync predict my next period?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Using your logged data, Luna Sync applies a predictive algorithm based on your cycle history. All computation happens on-device with no data leaving your phone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Luna Sync a medical device or contraceptive tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Luna Sync is a wellness and education tool. It is not FDA-cleared, not a medical device, and should not be used as a contraceptive method. Always consult a healthcare professional."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lunasync.app" }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS via CDN + custom styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+    :root {
+      --space: #0b0d17;
+      --midnight: #11142a;
+      --silver: #e8e6f0;
+      --moon-glow: #c8b8e8;
+      --accent: #7c6faa;
+      --rose: #d4a0b0;
+      --glass: rgba(255, 255, 255, 0.04);
+      --glass-strong: rgba(255, 255, 255, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--space);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--space);
+      color: var(--silver);
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Typography ─── */
+    .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* ─── Glass card ─── */
+    .glass-card {
+      background: var(--glass);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1.5rem;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* ─── Gradient text ─── */
+    .gradient-text {
+      background: linear-gradient(135deg, #e8e6f0 0%, #d4c0e8 35%, var(--rose) 65%, #e8e6f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% 200%;
+      animation: shimmer 6s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* ─── Glow effects ─── */
+    .glow-ring {
+      box-shadow: 0 0 60px rgba(124, 111, 170, 0.15), 0 0 120px rgba(124, 111, 170, 0.05);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 40px rgba(200, 184, 232, 0.3);
+    }
+
+    /* ─── Moon decoration ─── */
+    .moon-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .moon-orb-1 {
+      background: radial-gradient(circle at 35% 35%, rgba(212, 160, 176, 0.12), rgba(124, 111, 170, 0.03));
+    }
+    .moon-orb-2 {
+      background: radial-gradient(circle at 65% 65%, rgba(200, 184, 232, 0.1), rgba(124, 111, 170, 0.02));
+    }
+
+    /* ─── Feature cards ─── */
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(200, 184, 232, 0.2);
+      box-shadow: 0 8px 40px rgba(124, 111, 170, 0.08), 0 0 60px rgba(200, 184, 232, 0.04);
+    }
+
+    /* ─── FAQ accordion ─── */
+    .faq-question {
+      cursor: pointer;
+      user-select: none;
+    }
+    .faq-question::after {
+      content: '+';
+      float: right;
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+      color: var(--accent);
+    }
+    .faq-question.open::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-answer.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* ─── App Store badge ─── */
+    .app-store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      background: linear-gradient(135deg, #fff 0%, #f0edf5 100%);
+      color: #000;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 30px rgba(200, 184, 232, 0.15);
+    }
+    .app-store-badge:hover {
+      opacity: 0.95;
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(200, 184, 232, 0.25);
+    }
+    .app-store-badge svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ─── Screenshot mockup ─── */
+    .mockup-frame {
+      border-radius: 2rem;
+      overflow: hidden;
+      max-width: 320px;
+      margin: 0 auto;
+      position: relative;
+      background: linear-gradient(135deg, rgba(200, 184, 232, 0.2), rgba(124, 111, 170, 0.08), rgba(200, 184, 232, 0.15));
+      padding: 2px;
+      box-shadow:
+        0 0 60px rgba(124, 111, 170, 0.12),
+        0 0 120px rgba(124, 111, 170, 0.04),
+        inset 0 2px 0 rgba(255, 255, 255, 0.06);
+    }
+    .mockup-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 2rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(200,184,232,0.15), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .mockup-frame .screenshot-img {
+      border-radius: 1.85rem;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    /* Detail feature screenshot — larger variant */
+    .mockup-frame-lg {
+      max-width: 350px;
+    }
+    .mockup-frame-lg .screenshot-img {
+      aspect-ratio: 9 / 19.5;
+      object-fit: cover;
+    }
+
+    /* ─── Divider ─── */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    }
+
+    /* ─── Footer links ─── */
+    .footer-link {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.2s ease;
+      text-decoration: none;
+    }
+    .footer-link:hover {
+      color: var(--silver);
+    }
+
+    /* ─── Responsive images ─── */
+    .screenshot-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 19.5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .icon-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+    }
+    @media (min-width: 768px) {
+      .icon-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 18px;
+      }
+    }
+
+    /* ─── Animations ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+    .animate-fade-up-delay-1 { animation-delay: 0.1s; }
+    .animate-fade-up-delay-2 { animation-delay: 0.2s; }
+    .animate-fade-up-delay-3 { animation-delay: 0.3s; }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+
+    /* ─── Scrollbar ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--space); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- NAVIGATION                               -->
+  <!-- ════════════════════════════════════════ -->
+  <header class="fixed top-0 left-0 right-0 z-50" style="background: rgba(11, 13, 23, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.04);">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="/assets/icon1024x1024bb.png" alt="Luna Sync" class="icon-img" style="width: 32px; height: 32px; border-radius: 8px;" />
+        <span class="font-display text-lg font-semibold" style="color: var(--silver);">Luna Sync</span>
+      </div>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#features" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.features" style="color: rgba(255,255,255,0.6);">Features</a>
+        <a href="#faq" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.faq" style="color: rgba(255,255,255,0.6);">FAQ</a>
+        <a href="#privacy" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.privacy" style="color: rgba(255,255,255,0.6);">Privacy</a>
+        <a id="lang-switch" href="/zh/" class="px-3 py-1.5 rounded-full text-sm font-medium transition-all" style="background: rgba(255,255,255,0.06); color: var(--silver); border: 1px solid rgba(255,255,255,0.08);">中文</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- HERO                                     -->
+  <!-- ════════════════════════════════════════ -->
+  <main>
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-16">
+      <!-- Ambient moon orbs -->
+      <div class="moon-orb moon-orb-1 animate-pulse-glow" style="width: 600px; height: 600px; top: -150px; right: -200px;"></div>
+      <div class="moon-orb moon-orb-2 animate-pulse-glow" style="width: 400px; height: 400px; bottom: -100px; left: -150px; animation-delay: 2s;"></div>
+      <div class="moon-orb moon-orb-1 animate-pulse-glow" style="width: 200px; height: 200px; top: 40%; right: 10%; animation-delay: 1s;"></div>
+
+      <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+          <!-- Left: Copy -->
+          <div class="animate-fade-up md:pr-8">
+            <span class="inline-block px-4 py-1.5 text-xs font-medium tracking-widest uppercase rounded-full mb-8" style="background: rgba(124, 111, 170, 0.12); color: var(--accent); border: 1px solid rgba(124, 111, 170, 0.2); letter-spacing: 0.12em;" data-i18n="hero.badge">Now Available on iOS</span>
+
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold mb-6 gradient-text glow-text" data-i18n="hero.title">
+              Live in sync with the moon.
+            </h1>
+
+            <p class="text-lg md:text-xl leading-relaxed mb-10" style="color: rgba(232, 230, 240, 0.65);" data-i18n="hero.subtitle">
+              Luna Sync maps your cycle to lunar phases — revealing your inner seasons with privacy-first intelligence.
+            </p>
+
+            <!-- App Store badge -->
+            <a href="https://apps.apple.com/app/apple-store/id6782758960?pt=128027998&ct=web&mt=8" class="app-store-badge inline-flex items-center mb-4" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.26 3.51 7.3 9.05 7.31c1.35.01 2.3.74 3.1.74.78 0 2.25-.91 3.8-.77.65.03 2.48.26 3.65 1.96-.09.07-2.18 1.27-2.15 3.79.03 3.01 2.64 4.01 2.67 4.03-.02.07-.42 1.44-1.38 2.85l-.69 1.08zM12.03 7.25c-.67-1.51-1.79-2.21-2.56-2.25-.12 1.13.38 2.31 1.03 3.06.68.79 1.72 1.28 2.64 1.21.13-1.08-.44-2.21-1.11-2.02z"/></svg>
+              <span data-i18n="hero.cta">Download on the App Store</span>
+            </a>
+
+            <p class="text-xs" style="color: rgba(255, 255, 255, 0.35);" data-i18n="hero.trust">
+              Your data never leaves your device. End-to-end encrypted.
+            </p>
+          </div>
+
+          <!-- Right: Screenshot carousel -->
+          <div class="animate-fade-up animate-fade-up-delay-2">
+            <div class="mockup-frame">
+              <img src="/assets/1.png" alt="Luna Sync App Screenshot" class="screenshot-img" loading="eager" />
+            </div>
+            <!-- Thumbnail nav -->
+            <div class="flex justify-center gap-2 mt-6">
+              <button class="carousel-dot w-8 h-0.5 rounded-full transition-all duration-300" style="background: var(--silver);" onclick="switchScreenshot(0)" aria-label="Screenshot 1"></button>
+              <button class="carousel-dot w-6 h-0.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.15);" onclick="switchScreenshot(1)" aria-label="Screenshot 2"></button>
+              <button class="carousel-dot w-6 h-0.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.15);" onclick="switchScreenshot(2)" aria-label="Screenshot 3"></button>
+              <button class="carousel-dot w-6 h-0.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.15);" onclick="switchScreenshot(3)" aria-label="Screenshot 4"></button>
+              <button class="carousel-dot w-6 h-0.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.15);" onclick="switchScreenshot(4)" aria-label="Screenshot 5"></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- FEATURES                                 -->
+    <!-- ════════════════════════════════════════ -->
+    <section id="features" class="py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="font-display text-3xl md:text-4xl text-center mb-4 gradient-text" data-i18n="features.heading">Designed for your rhythm</h2>
+        <div class="section-divider w-24 mx-auto mb-16"></div>
+
+        <!-- Features rendered from i18n dict -->
+        <div class="grid md:grid-cols-3 gap-8" data-i18n-features="features.items">
+          <!-- Feature 1: Moon Phase Tracking -->
+          <article class="glass-card p-8 feature-card" data-i18n-feat-index="0">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background: rgba(124, 111, 170, 0.15);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20 8 8 0 0 1 0-16 8 8 0 0 0 0-16"/></svg>
+            </div>
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background: rgba(124, 111, 170, 0.12); color: var(--accent);" data-i18n-feat-tag>Cyclical Living</span>
+            <h3 class="text-xl font-display font-semibold mt-3 mb-2" style="color: var(--silver);" data-i18n-feat-title>Moon Phase Tracking</h3>
+            <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-feat-desc>See how your cycle aligns with the 8 lunar phases.</p>
+          </article>
+
+          <!-- Feature 2: Inner Seasons -->
+          <article class="glass-card p-8 feature-card" data-i18n-feat-index="1">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background: rgba(124, 111, 170, 0.15);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background: rgba(124, 111, 170, 0.12); color: var(--accent);" data-i18n-feat-tag>Inner Seasons</span>
+            <h3 class="text-xl font-display font-semibold mt-3 mb-2" style="color: var(--silver);" data-i18n-feat-title>The Inner Seasons</h3>
+            <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-feat-desc>Your cycle has four distinct seasons.</p>
+          </article>
+
+          <!-- Feature 3: Privacy -->
+          <article class="glass-card p-8 feature-card" data-i18n-feat-index="2">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background: rgba(124, 111, 170, 0.15);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background: rgba(124, 111, 170, 0.12); color: var(--accent);" data-i18n-feat-tag>Privacy First</span>
+            <h3 class="text-xl font-display font-semibold mt-3 mb-2" style="color: var(--silver);" data-i18n-feat-title>Private by Design</h3>
+            <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-feat-desc>All health data encrypted and stored locally.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- DETAILED FEATURES (alternating layout)   -->
+    <!-- ════════════════════════════════════════ -->
+    <section class="py-24 md:py-32" style="background: rgba(17, 20, 42, 0.4);">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+          <div>
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background: rgba(124, 111, 170, 0.12); color: var(--accent);" data-i18n="features.items.0.tag">Cyclical Living</span>
+            <h3 class="font-display text-2xl md:text-3xl font-semibold mt-3 mb-4 gradient-text" data-i18n="features.items.0.title">Moon Phase Tracking</h3>
+            <p class="leading-relaxed" style="color: rgba(232, 230, 240, 0.7);" data-i18n="features.items.0.desc">
+              See how your cycle aligns with the 8 lunar phases. Luna Sync maps your personal data against the moon's journey.
+            </p>
+          </div>
+          <div class="mockup-frame mockup-frame-lg">
+            <img src="/assets/2.png" alt="Moon Phase Tracking" class="screenshot-img" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+          <div class="order-2 md:order-1">
+            <div class="mockup-frame mockup-frame-lg">
+              <img src="/assets/3.png" alt="Inner Seasons" class="screenshot-img" loading="lazy" />
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background: rgba(124, 111, 170, 0.12); color: var(--accent);" data-i18n="features.items.1.tag">Inner Seasons</span>
+            <h3 class="font-display text-2xl md:text-3xl font-semibold mt-3 mb-4 gradient-text" data-i18n="features.items.1.title">The Inner Seasons</h3>
+            <p class="leading-relaxed" style="color: rgba(232, 230, 240, 0.7);" data-i18n="features.items.1.desc">
+              Your cycle has four distinct seasons: Inner Spring, Summer, Autumn, Winter. Luna Sync helps you understand each phase.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background: rgba(124, 111, 170, 0.12); color: var(--accent);" data-i18n="features.items.2.tag">Privacy First</span>
+            <h3 class="font-display text-2xl md:text-3xl font-semibold mt-3 mb-4 gradient-text" data-i18n="features.items.2.title">Private by Design</h3>
+            <p class="leading-relaxed" style="color: rgba(232, 230, 240, 0.7);" data-i18n="features.items.2.desc">
+              All health data is encrypted and stored locally on your device. No cloud sync, no accounts, no tracking.
+            </p>
+          </div>
+          <div class="mockup-frame mockup-frame-lg">
+            <img src="/assets/4.png" alt="Privacy First" class="screenshot-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- KNOWLEDGE HUB / FAQ                      -->
+    <!-- ════════════════════════════════════════ -->
+    <section id="faq" class="py-24 md:py-32">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-display text-3xl md:text-4xl text-center mb-4 gradient-text" data-i18n="faq.heading">Knowledge Hub</h2>
+        <div class="section-divider w-24 mx-auto mb-16"></div>
+
+        <div class="space-y-4" id="faq-list">
+          <!-- FAQ items rendered by JS from i18n dict -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- PRIVACY / TRUST BANNER                   -->
+    <!-- ════════════════════════════════════════ -->
+    <section id="privacy" class="py-24" style="background: rgba(17, 20, 42, 0.4);">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background: rgba(124, 111, 170, 0.15);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h2 class="font-display text-2xl md:text-3xl font-semibold mb-4 gradient-text">Your data, your device.</h2>
+        <p class="max-w-2xl mx-auto leading-relaxed mb-8" style="color: rgba(232, 230, 240, 0.7);">
+          Luna Sync operates entirely on-device. We have no servers, no cloud, no analytics SDKs. Your health data never leaves your iPhone — not even for "improving the app." End-to-end encrypted, zero-knowledge architecture.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 text-sm">
+          <span class="px-4 py-2 rounded-full" style="background: rgba(124,111,170,0.08); border: 1px solid rgba(124,111,170,0.15); color: var(--accent);"><span style="opacity:0.6;">✦</span> AES-256 Encryption</span>
+          <span class="px-4 py-2 rounded-full" style="background: rgba(124,111,170,0.08); border: 1px solid rgba(124,111,170,0.15); color: var(--accent);"><span style="opacity:0.6;">✦</span> On-Device Only</span>
+          <span class="px-4 py-2 rounded-full" style="background: rgba(124,111,170,0.08); border: 1px solid rgba(124,111,170,0.15); color: var(--accent);"><span style="opacity:0.6;">✦</span> No Analytics SDKs</span>
+          <span class="px-4 py-2 rounded-full" style="background: rgba(124,111,170,0.08); border: 1px solid rgba(124,111,170,0.15); color: var(--accent);"><span style="opacity:0.6;">✦</span> No Account Required</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- CTA BANNER                               -->
+    <!-- ════════════════════════════════════════ -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6 gradient-text glow-text">Start your lunar journey.</h2>
+        <p class="text-lg mb-8" style="color: rgba(232, 230, 240, 0.7);" data-i18n="hero.subtitle">
+          Luna Sync maps your cycle to lunar phases.
+        </p>
+        <a href="https://apps.apple.com/app/apple-store/id6782758960?pt=128027998&ct=web&mt=8" class="app-store-badge inline-flex items-center mx-auto" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.26 3.51 7.3 9.05 7.31c1.35.01 2.3.74 3.1.74.78 0 2.25-.91 3.8-.77.65.03 2.48.26 3.65 1.96-.09.07-2.18 1.27-2.15 3.79.03 3.01 2.64 4.01 2.67 4.03-.02.07-.42 1.44-1.38 2.85l-.69 1.08zM12.03 7.25c-.67-1.51-1.79-2.21-2.56-2.25-.12 1.13.38 2.31 1.03 3.06.68.79 1.72 1.28 2.64 1.21.13-1.08-.44-2.21-1.11-2.02z"/></svg>
+          <span data-i18n="hero.cta">Download on the App Store</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- FOOTER                                   -->
+  <!-- ════════════════════════════════════════ -->
+  <footer class="py-12" style="border-top: 1px solid rgba(255,255,255,0.06);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="/assets/icon1024x1024bb.png" alt="Luna Sync" style="width: 28px; height: 28px; border-radius: 7px;" />
+          <span class="font-display text-sm" data-i18n="footer.tagline" style="color: rgba(255,255,255,0.4);">In harmony with your cycle.</span>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="/privacy" class="footer-link" data-i18n="footer.links.privacy">Privacy Policy</a>
+          <a href="/terms" class="footer-link" data-i18n="footer.links.terms">Terms of Use</a>
+          <a href="/disclaimer" class="footer-link" data-i18n="footer.links.disclaimer">Medical Disclaimer</a>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-xs" style="color: rgba(255,255,255,0.2);" data-i18n="footer.copyright">
+        © 2026 Luna Sync. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- TEMPLATES                                -->
+  <!-- ════════════════════════════════════════ -->
+  <template id="faq-template">
+    <div class="glass-card p-6 faq-item">
+      <div class="faq-question flex justify-between items-center">
+        <h3 class="font-display text-lg font-medium" data-i18n-item="q" style="color: var(--silver);"></h3>
+      </div>
+      <div class="faq-answer mt-3">
+        <p class="text-sm leading-relaxed" data-i18n-item="a" style="color: rgba(232, 230, 240, 0.7);"></p>
+      </div>
+    </div>
+  </template>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SCRIPTS                                  -->
+  <!-- ════════════════════════════════════════ -->
+  <script src="/js/i18n.js"></script>
+  <script>
+    // ─── FAQ accordion ───
+    (function() {
+      const container = document.getElementById('faq-list');
+      const template = document.getElementById('faq-template');
+
+      // Build FAQ from i18n data after render
+      function buildFAQs() {
+        // Find the dict from the i18n module
+        const path = window.location.pathname;
+        const lang = path.match(/^\/(en|zh)\//) ? path.match(/^\/(en|zh)\//)[1] : 'en';
+
+        fetch(`/i18n/${lang}.json`)
+          .then(r => r.json())
+          .then(dict => {
+            const items = dict.faq?.items || [];
+            container.innerHTML = '';
+            items.forEach((item, idx) => {
+              const clone = template.content.cloneNode(true);
+              const qEl = clone.querySelector('[data-i18n-item="q"]');
+              const aEl = clone.querySelector('[data-i18n-item="a"]');
+              if (qEl) qEl.textContent = item.q;
+              if (aEl) aEl.textContent = item.a;
+
+              const wrapper = clone.querySelector('.faq-item');
+              wrapper.dataset.index = idx;
+
+              // Click handler
+              const question = wrapper.querySelector('.faq-question');
+              const answer = wrapper.querySelector('.faq-answer');
+              question.addEventListener('click', () => {
+                const isOpen = answer.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('.faq-question').forEach(el => el.classList.remove('open'));
+                if (!isOpen) {
+                  answer.classList.add('open');
+                  question.classList.add('open');
+                }
+              });
+
+              container.appendChild(clone);
+            });
+          });
+      }
+
+      // Wait for i18n load, then build FAQ
+      setTimeout(buildFAQs, 100);
+    })();
+
+    // ─── Screenshot carousel ───
+    function switchScreenshot(index) {
+      const images = ['1.png', '2.png', '3.png', '4.png', '5.png'];
+      const img = document.querySelector('.mockup-frame .screenshot-img');
+      if (img && images[index]) {
+        img.src = `/assets/${images[index]}`;
+        img.alt = `Luna Sync Screenshot ${index + 1}`;
+        // Update dots: widen active, narrow others
+        document.querySelectorAll('.carousel-dot').forEach((btn, i) => {
+          if (i === index) {
+            btn.style.background = 'var(--silver)';
+            btn.style.width = '32px';
+          } else {
+            btn.style.background = 'rgba(255,255,255,0.15)';
+            btn.style.width = '16px';
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

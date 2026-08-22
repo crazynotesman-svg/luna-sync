@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Luna Sync — Track Your Cycle in Harmony with the Moon",
+    "description": "Luna Sync helps you understand your menstrual cycle through the lens of lunar phases. Privacy-first, medically-informed, beautifully minimal."
+  },
+  "nav": {
+    "features": "Features",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "langSwitch": "中文"
+  },
+  "hero": {
+    "badge": "Now Available on iOS",
+    "title": "Live in sync with the moon.",
+    "subtitle": "Luna Sync maps your cycle to lunar phases — revealing your inner seasons with privacy-first intelligence.",
+    "cta": "Download on the App Store",
+    "trust": "Your data never leaves your device. End-to-end encrypted."
+  },
+  "features": {
+    "heading": "Designed for your rhythm",
+    "items": [
+      {
+        "title": "Moon Phase Tracking",
+        "desc": "See how your cycle aligns with the 8 lunar phases. Luna Sync maps your personal data against the moon's journey — new moon to full, and back again.",
+        "tag": "Cyclical Living"
+      },
+      {
+        "title": "The Inner Seasons",
+        "desc": "Your cycle has four distinct seasons: Inner Spring (follicular), Summer (ovulatory), Autumn (luteal), Winter (menstrual). Luna Sync helps you understand each phase and plan accordingly.",
+        "tag": "Inner Seasons"
+      },
+      {
+        "title": "Private by Design",
+        "desc": "All health data is encrypted and stored locally on your device. No cloud sync, no accounts, no tracking. You own your cycle, completely.",
+        "tag": "Privacy First"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Knowledge Hub",
+    "items": [
+      {
+        "q": "Is my menstrual cycle really linked to the moon?",
+        "a": "While individual cycles vary, research suggests a statistical correlation between lunar phases and menstrual onset. A 2021 study in *Science Advances* found that periods often synchronize with the new or full moon. Luna Sync helps you explore this connection with your own data."
+      },
+      {
+        "q": "How does Luna Sync protect my health data?",
+        "a": "All data is encrypted using AES-256 and stored exclusively on-device. Luna Sync has no servers, no cloud storage, and no analytics SDKs. We do not collect, share, or sell any personal information — ever."
+      },
+      {
+        "q": "What are the 'Inner Seasons' of the menstrual cycle?",
+        "a": "The menstrual cycle is commonly divided into four phases: Inner Spring (follicular phase — energy rises), Summer (ovulation — peak energy), Autumn (luteal phase — energy recedes), and Winter (menstruation — rest and reflection). Luna Sync visualizes your cycle through this seasonal lens."
+      },
+      {
+        "q": "Can Luna Sync predict my next period?",
+        "a": "Yes. Using your logged data, Luna Sync applies a predictive algorithm based on your cycle history. Predictions improve over time as you log more cycles. All computation happens on-device."
+      },
+      {
+        "q": "Is Luna Sync a medical device or contraceptive tool?",
+        "a": "No. Luna Sync is a wellness and education tool. It is not FDA-cleared, not a medical device, and should not be used as a contraceptive method. Always consult a healthcare professional for medical decisions."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "In harmony with your cycle.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "disclaimer": "Medical Disclaimer"
+    },
+    "copyright": "© 2026 Luna Sync. All rights reserved."
+  }
+}

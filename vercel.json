@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@cloudflare/static"
+    }
+  ],
+  "routes": [
+    { "src": "/en/", "dest": "/index.html" },
+    { "src": "/zh/", "dest": "/index.html" },
+    { "src": "/assets/*", "dest": "/assets/$1" },
+    { "src": "/js/*", "dest": "/js/$1" },
+    { "src": "/i18n/*", "dest": "/i18n/$1" },
+    { "src": "/privacy", "status": 301, "headers": { "Location": "https://lunasync.app/en/" } },
+    { "src": "/terms", "status": 301, "headers": { "Location": "https://lunasync.app/en/" } },
+    { "src": "/disclaimer", "status": 301, "headers": { "Location": "https://lunasync.app/en/" } }
+  ]
+}
