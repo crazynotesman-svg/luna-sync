@@ -9,7 +9,7 @@
 
   // ─── Detect language from URL path ───
   const path = window.location.pathname;
-  const match = path.match(/^\/(en|zh)\//);
+  const match = path.match(/^\/(en|zh|de)\//);
   const currentLang = match ? match[1] : 'en';
 
   // ─── Load dictionary ───
@@ -70,12 +70,14 @@
       }
     });
 
-    // Lang switch button
+    // Lang switch button — cycle through en → zh → de → en
     const switchBtn = document.getElementById('lang-switch');
     if (switchBtn) {
-      const targetLang = currentLang === 'en' ? 'zh' : 'en';
-      const label = dict.nav?.langSwitch || (targetLang === 'en' ? 'English' : '中文');
-      const targetPath = path.replace(/^\/(en|zh)\//, `/${targetLang}/`);
+      const langOrder = ['en', 'zh', 'de'];
+      const currentIdx = langOrder.indexOf(currentLang);
+      const targetLang = langOrder[(currentIdx + 1) % langOrder.length];
+      const label = dict.nav?.langSwitch || targetLang;
+      const targetPath = path.replace(/^\/(en|zh|de)\//, `/${targetLang}/`);
       switchBtn.textContent = label;
       switchBtn.setAttribute('href', targetPath);
     }

@@ -58,8 +58,24 @@
       {
         "q": "Is Luna Sync a medical device or contraceptive tool?",
         "a": "No. Luna Sync is a wellness and education tool. It is not FDA-cleared, not a medical device, and should not be used as a contraceptive method. Always consult a healthcare professional for medical decisions."
+      },
+      {
+        "q": "What is 'Cyclical Living' and how does Luna Sync support it?",
+        "a": "Cyclical Living means aligning your daily life with your natural hormonal rhythms rather than fighting them. Luna Sync helps you identify your high-energy and restorative phases so you can plan work, exercise, and social activities optimally. Research suggests cycle-syncing can improve productivity by up to 30% and reduce stress."
+      },
+      {
+        "q": "Can I use Luna Sync without an internet connection?",
+        "a": "Yes, Luna Sync works fully offline. After the initial download, no internet connection is required — all features including tracking, prediction, and moon phase visualization run locally on your device. Your data is never transmitted to any external server."
+      },
+      {
+        "q": "How is Luna Sync different from other cycle tracking apps?",
+        "a": "Most cycle trackers send your data to the cloud. Luna Sync is different: all data remains on your device (local-first architecture). We have no servers, no analytics SDKs, and require no account. Combined with the unique moon phase visualization and inner seasons framework, Luna Sync offers a truly private and holistic experience."
       }
     ]
+  },
+  "privacy_manifesto": {
+    "title": "Why Privacy Matters",
+    "text": "Your health data belongs to you. Most cycle tracking apps send intimate health data to external servers — some even sell it to advertisers. Luna Sync was built differently: everything stays on your device. We use AES-256 encryption, no cloud accounts, no analytics SDKs, no data collection. Luna Sync doesn't need an internet connection to function — download once and it works fully offline. Your body, your data, your iPhone."
   },
   "footer": {
     "tagline": "In harmony with your cycle.",

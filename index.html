@@ -13,6 +13,8 @@
   <meta property="og:url" content="https://luna.100ideas.net" />
   <meta property="og:image" content="/assets/og-image.png" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:site_name" content="Luna Sync" />
 
   <!-- Twitter Card -->
@@ -24,6 +26,7 @@
   <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://luna.100ideas.net/en/" />
   <link rel="alternate" hreflang="zh" href="https://luna.100ideas.net/zh/" />
+  <link rel="alternate" hreflang="de" href="https://luna.100ideas.net/de/" />
   <link rel="alternate" hreflang="x-default" href="https://luna.100ideas.net/en/" />
 
   <!-- Canonical -->
@@ -103,6 +106,30 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "No. Luna Sync is a wellness and education tool. It is not FDA-cleared, not a medical device, and should not be used as a contraceptive method. Always consult a healthcare professional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Cyclical Living and how does Luna Sync support it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cyclical Living means aligning your daily life with your natural hormonal rhythms. Research suggests cycle-syncing can improve productivity by up to 30% and reduce stress. Luna Sync helps you identify your high-energy and restorative phases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Luna Sync without an internet connection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Luna Sync works fully offline. All features including tracking, prediction, and moon phase visualization run locally on your device. Your data is never transmitted to any external server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Luna Sync different from other cycle tracking apps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Luna Sync uses a local-first architecture where all data remains on your device. We have no servers, no analytics SDKs, and require no account. Combined with unique moon phase visualization and inner seasons framework, it offers a truly private holistic experience."
         }
       }
     ]
@@ -388,7 +415,7 @@
         <a href="#features" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.features" style="color: rgba(255,255,255,0.6);">Features</a>
         <a href="#faq" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.faq" style="color: rgba(255,255,255,0.6);">FAQ</a>
         <a href="#privacy" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.privacy" style="color: rgba(255,255,255,0.6);">Privacy</a>
-        <a id="lang-switch" href="/zh/" class="px-3 py-1.5 rounded-full text-sm font-medium transition-all" style="background: rgba(255,255,255,0.06); color: var(--silver); border: 1px solid rgba(255,255,255,0.08);">中文</a>
+        <a id="lang-switch" href="/zh/" class="px-3 py-1.5 rounded-full text-sm font-medium transition-all" style="background: rgba(255,255,255,0.06); color: var(--silver); border: 1px solid rgba(255,255,255,0.08);" data-i18n="nav.langSwitch">中文</a>
       </div>
     </nav>
   </header>
@@ -494,7 +521,7 @@
     <!-- ════════════════════════════════════════ -->
     <!-- DETAILED FEATURES (alternating layout)   -->
     <!-- ════════════════════════════════════════ -->
-    <section class="py-24 md:py-32" style="background: rgba(17, 20, 42, 0.4);">
+    <section id="detailed-features" class="py-24 md:py-32" style="background: rgba(17, 20, 42, 0.4);">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
           <div>
@@ -554,6 +581,21 @@
     </section>
 
     <!-- ════════════════════════════════════════ -->
+    <!-- WHY PRIVACY MATTERS (manifesto)          -->
+    <!-- ════════════════════════════════════════ -->
+    <section id="why-privacy-matters" class="py-24" style="background: rgba(11, 13, 23, 1);">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="glass-card p-10 md:p-14">
+          <h2 class="font-display text-2xl md:text-3xl font-semibold mb-6 gradient-text" data-i18n="privacy_manifesto.title">Why Privacy Matters</h2>
+          <div class="section-divider w-16 mb-6"></div>
+          <p class="leading-relaxed text-base md:text-lg" style="color: rgba(232, 230, 240, 0.8);" data-i18n="privacy_manifesto.text">
+            Your health data belongs to you. Most cycle tracking apps send intimate health data to external servers — some even sell it to advertisers. Luna Sync was built differently: everything stays on your device. We use AES-256 encryption, no cloud accounts, no analytics SDKs, no data collection. Luna Sync doesn't need an internet connection to function — download once and it works fully offline. Your body, your data, your iPhone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ -->
     <!-- PRIVACY / TRUST BANNER                   -->
     <!-- ════════════════════════════════════════ -->
     <section id="privacy" class="py-24" style="background: rgba(17, 20, 42, 0.4);">
@@ -577,9 +619,7 @@
     <!-- ════════════════════════════════════════ -->
     <!-- CTA BANNER                               -->
     <!-- ════════════════════════════════════════ -->
-    <section class="py-24">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6 gradient-text glow-text">Start your lunar journey.</h2>
+    <section id="cta" class="py-24">
         <p class="text-lg mb-8" style="color: rgba(232, 230, 240, 0.7);" data-i18n="hero.subtitle">
           Luna Sync maps your cycle to lunar phases.
         </p>
@@ -642,7 +682,7 @@
       function buildFAQs() {
         // Find the dict from the i18n module
         const path = window.location.pathname;
-        const lang = path.match(/^\/(en|zh)\//) ? path.match(/^\/(en|zh)\//)[1] : 'en';
+        const lang = path.match(/^\/(en|zh|de)\//) ? path.match(/^\/(en|zh|de)\//)[1] : 'en';
 
         fetch(`/i18n/${lang}.json`)
           .then(r => r.json())

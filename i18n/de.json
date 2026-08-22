@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Luna Sync — Zyklus im Einklang mit dem Mond",
+    "description": "Luna Sync hilft Dir, Deinen Menstruationszyklus durch die Brille der Mondphasen zu verstehen. Datenschutz an erster Stelle, medizinisch fundiert, wunderschön minimalistisch."
+  },
+  "nav": {
+    "features": "Features",
+    "faq": "Wissen",
+    "privacy": "Datenschutz",
+    "langSwitch": "English"
+  },
+  "hero": {
+    "badge": "Jetzt für iOS verfügbar",
+    "title": "Lebe im Einklang mit dem Mond.",
+    "subtitle": "Luna Sync verbindet Deinen Zyklus mit den Mondphasen — und zeigt Dir Deine inneren Jahreszeiten mit datenschutzfreundlicher Intelligenz.",
+    "cta": "Im App Store laden",
+    "trust": "Deine Daten verlassen nie Dein Gerät. Ende-zu-Ende verschlüsselt."
+  },
+  "features": {
+    "heading": "Entworfen für Deinen Rhythmus",
+    "items": [
+      {
+        "title": "Mondphasen-Tracking",
+        "desc": "Erkenne, wie Dein Zyklus mit den 8 Mondphasen harmoniert. Luna Sync verbindet Deine persönlichen Daten mit der Reise des Mondes — vom Neumond bis zum Vollmond und zurück.",
+        "tag": "Zyklisches Leben"
+      },
+      {
+        "title": "Die inneren Jahreszeiten",
+        "desc": "Dein Zyklus hat vier Jahreszeiten: Innerer Frühling (Follikelphase), Sommer (Eisprung), Herbst (Lutealphase), Winter (Menstruation). Luna Sync hilft Dir, jede Phase zu verstehen.",
+        "tag": "Innere Jahreszeiten"
+      },
+      {
+        "title": "Privat von Grund auf",
+        "desc": "Alle Gesundheitsdaten werden verschlüsselt und lokal auf Deinem Gerät gespeichert. Keine Cloud-Synchronisation, keine Konten, kein Tracking. Dein Zyklus gehört Dir.",
+        "tag": "Datenschutz zuerst"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Wissenszentrum",
+    "items": [
+      {
+        "q": "Besteht wirklich ein Zusammenhang zwischen Menstruationszyklus und Mond?",
+        "a": "Obwohl Zyklen individuell variieren, deuten Studien auf eine statistische Korrelation zwischen Mondphasen und Menstruationsbeginn hin. Eine Studie aus dem Jahr 2021 in Science Advances fand, dass Perioden häufig mit Neu- oder Vollmond synchronisieren. Luna Sync hilft Dir, diese Verbindung mit Deinen eigenen Daten zu erkunden."
+      },
+      {
+        "q": "Wie schützt Luna Sync meine Gesundheitsdaten?",
+        "a": "Alle Daten werden mit AES-256 verschlüsselt und ausschließlich auf dem Gerät gespeichert. Luna Sync hat keine Server, keine Cloud-Speicher und keine Analyse-SDKs. Wir sammeln, teilen oder verkaufen keinerlei persönliche Informationen."
+      },
+      {
+        "q": "Was sind die 'Inneren Jahreszeiten' des Menstruationszyklus?",
+        "a": "Der Menstruationszyklus wird in vier Phasen unterteilt: Innerer Frühling (Follikelphase — Energie steigt), Sommer (Eisprung — Höchstenergie), Herbst (Lutealphase — Energie sinkt) und Winter (Menstruation — Ruhe und Reflexion). Luna Sync visualisiert Deinen Zyklus durch diese jahreszeitliche Linse."
+      },
+      {
+        "q": "Kann Luna Sync meine nächste Periode vorhersagen?",
+        "a": "Ja. Basierend auf Deinen aufgezeichneten Daten wendet Luna Sync einen Vorhersagealgorithmus auf der Grundlage Deiner Zyklushistorie an. Alle Berechnungen erfolgen auf dem Gerät. Je mehr Zyklen Du aufzeichnest, desto genauer werden die Vorhersagen."
+      },
+      {
+        "q": "Ist Luna Sync ein medizinisches Gerät oder Verhütungsmittel?",
+        "a": "Nein. Luna Sync ist ein Wellness- und Bildungsinstrument. Es ist nicht von der FDA geprüft, kein medizinisches Gerät und sollte nicht als Verhütungsmethode verwendet werden. Bei medizinischen Entscheidungen konsultiere bitte immer einen Arzt."
+      },
+      {
+        "q": "Was ist 'Zyklisches Leben' und wie hilft Luna Sync dabei?",
+        "a": "Zyklisches Leben bedeutet, Deinen Alltag an Deine natürlichen hormonellen Rhythmen anzupassen — anstatt dagegen zu arbeiten. Luna Sync hilft Dir, Deine produktiven und erholsamen Phasen zu erkennen, sodass Du Arbeit, Bewegung und soziale Aktivitäten optimal planen kannst. Die Forschung zeigt, dass ‚Zyklus-Synchronisation‘ die Produktivität um bis zu 30 % steigern und Stress reduzieren kann."
+      },
+      {
+        "q": "Kann ich Luna Sync ohne Internetverbindung nutzen?",
+        "a": "Ja, Luna Sync funktioniert vollständig offline. Nach dem ersten Download benötigst Du keine Internetverbindung — alle Funktionen, einschließlich Tracking, Vorhersagen und Mondphasen-Visualisierung, laufen lokal auf Deinem Gerät. Deine Daten werden nie auf externe Server übertragen."
+      },
+      {
+        "q": "Wie unterscheidet sich Luna Sync von anderen Zyklus-Tracker-Apps?",
+        "a": "Die meisten Zyklus-Tracker senden Deine Daten in die Cloud. Luna Sync ist anders: Alle Daten bleiben auf Deinem Gerät (lokale Verarbeitung). Wir betreiben keine Server, haben keine Analyse-SDKs und benötigen kein Konto. Kombiniert mit der einzigartigen Mondphasen-Visualisierung und den inneren Jahreszeiten bietet Luna Sync ein wirklich privates und ganzheitliches Erlebnis."
+      }
+    ]
+  },
+  "privacy_manifesto": {
+    "title": "Warum Datenschutz wichtig ist",
+    "text": "Deine Gesundheit gehört Dir. Deine Daten auch. Die meisten Zyklus-Tracker senden persönliche Gesundheitsdaten auf externe Server — einige verkaufen sie sogar an Werbetreibende. Luna Sync wurde nach einem anderen Prinzip entwickelt: Alles bleibt auf Deinem Gerät. Wir verwenden AES-256-Verschlüsselung, kein Cloud-Konto, keine Analyse-SDKs, keine Datenerfassung. Luna Sync benötigt keine Internetverbindung zum Funktionieren. Lade die App einmal herunter und sie funktioniert vollständig offline. Dein Körper, Deine Daten, Dein Gerät."
+  },
+  "footer": {
+    "tagline": "Im Einklang mit Deinem Zyklus.",
+    "links": {
+      "privacy": "Datenschutzerklärung",
+      "terms": "Nutzungsbedingungen",
+      "disclaimer": "Medizinischer Haftungsausschluss"
+    },
+    "copyright": "© 2026 Luna Sync. Alle Rechte vorbehalten."
+  }
+}
