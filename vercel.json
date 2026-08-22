@@ -12,8 +12,8 @@
     { "src": "/assets/*", "dest": "/assets/$1" },
     { "src": "/js/*", "dest": "/js/$1" },
     { "src": "/i18n/*", "dest": "/i18n/$1" },
-    { "src": "/privacy", "status": 301, "headers": { "Location": "https://lunasync.app/en/" } },
-    { "src": "/terms", "status": 301, "headers": { "Location": "https://lunasync.app/en/" } },
-    { "src": "/disclaimer", "status": 301, "headers": { "Location": "https://lunasync.app/en/" } }
+    { "src": "/privacy", "dest": "/index.html" },
+    { "src": "/terms", "dest": "/index.html" },
+    { "src": "/disclaimer", "dest": "/index.html" }
   ]
 }
