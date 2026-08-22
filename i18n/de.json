@@ -85,5 +85,13 @@
       "disclaimer": "Medizinischer Haftungsausschluss"
     },
     "copyright": "© 2026 Luna Sync. Alle Rechte vorbehalten."
+  },
+  "glossary": {
+    "items": [
+      { "term": "Zyklisches Leben", "def": "Anpassung der täglichen Aktivitäten an die natürlichen hormonellen Rhythmen des Menstruationszyklus." },
+      { "term": "Innere Jahreszeiten", "def": "Die vier Phasen des Menstruationszyklus visualisiert als Frühling, Sommer, Herbst und Winter." },
+      { "term": "Mondphasen-Synchronisation", "def": "Abbildung von Menstruationszyklus-Daten auf die 8 Mondphasen (Neumond bis Vollmond und zurück)." },
+      { "term": "Lokaler Datenschutz", "def": "Architektur, bei der alle Benutzerdaten auf dem Gerät verarbeitet und gespeichert werden, ohne Cloud-Übertragung." }
+    ]
   }
 }

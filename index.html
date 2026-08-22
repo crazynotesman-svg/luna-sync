@@ -147,6 +147,47 @@
   }
   </script>
 
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "100BadIdeas",
+    "url": "https://100ideas.net",
+    "description": "Creative Digital Studio — Out of 100 bad ideas, one good one is always born.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@100ideas.net",
+      "contactType": "customer support"
+    },
+    "sameAs": [
+      "https://instagram.com/100badideas",
+      "https://100ideas.net"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Luna Sync — Track Your Cycle in Harmony with the Moon",
+    "description": "Privacy-first cycle tracking synced to lunar phases. Understand your inner seasons with on-device intelligence.",
+    "url": "https://luna.100ideas.net",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Luna Sync",
+      "url": "https://luna.100ideas.net"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Menstrual cycle tracking with lunar phases"
+    }
+  }
+  </script>
+
   <!-- Tailwind CSS via CDN + custom styles -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -415,7 +456,18 @@
         <a href="#features" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.features" style="color: rgba(255,255,255,0.6);">Features</a>
         <a href="#faq" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.faq" style="color: rgba(255,255,255,0.6);">FAQ</a>
         <a href="#privacy" class="hidden sm:inline hover:opacity-70 transition-opacity" data-i18n="nav.privacy" style="color: rgba(255,255,255,0.6);">Privacy</a>
-        <a id="lang-switch" href="/zh/" class="px-3 py-1.5 rounded-full text-sm font-medium transition-all" style="background: rgba(255,255,255,0.06); color: var(--silver); border: 1px solid rgba(255,255,255,0.08);" data-i18n="nav.langSwitch">中文</a>
+        <!-- Language dropdown -->
+        <div class="relative" id="lang-dropdown">
+          <button id="lang-current-btn" onclick="toggleLangDropdown()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all" style="background: rgba(255,255,255,0.06); color: var(--silver); border: 1px solid rgba(255,255,255,0.08);">
+            <span id="lang-current-label">English</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.6;"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div id="lang-dropdown-menu" class="absolute right-0 mt-2 min-w-[140px] rounded-xl overflow-hidden hidden" style="background: rgba(17, 20, 42, 0.95); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+            <a href="/en/" class="lang-option block px-4 py-2.5 text-sm transition-all hover:opacity-80" data-lang="en" style="color: var(--silver);">English</a>
+            <a href="/zh/" class="lang-option block px-4 py-2.5 text-sm transition-all hover:opacity-80" data-lang="zh" style="color: var(--silver);">中文</a>
+            <a href="/de/" class="lang-option block px-4 py-2.5 text-sm transition-all hover:opacity-80" data-lang="de" style="color: var(--silver);">Deutsch</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -620,6 +672,8 @@
     <!-- CTA BANNER                               -->
     <!-- ════════════════════════════════════════ -->
     <section id="cta" class="py-24">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6 gradient-text glow-text">Start your lunar journey.</h2>
         <p class="text-lg mb-8" style="color: rgba(232, 230, 240, 0.7);" data-i18n="hero.subtitle">
           Luna Sync maps your cycle to lunar phases.
         </p>
@@ -630,6 +684,34 @@
       </div>
     </section>
   </main>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- GLOSSARY                                 -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="glossary" class="py-24" style="background: rgba(17, 20, 42, 0.3);">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-display text-2xl md:text-3xl text-center mb-4 gradient-text">Glossary</h2>
+      <div class="section-divider w-24 mx-auto mb-12"></div>
+      <div class="grid md:grid-cols-2 gap-6" data-i18n-glossary="glossary.items">
+        <div class="glass-card p-6">
+          <h3 class="text-sm font-semibold tracking-wider uppercase mb-1" style="color: var(--accent);" data-i18n-gloss-term>Cyclical Living</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-gloss-def>Aligning daily activities with natural hormonal rhythms across the menstrual cycle.</p>
+        </div>
+        <div class="glass-card p-6">
+          <h3 class="text-sm font-semibold tracking-wider uppercase mb-1" style="color: var(--accent);" data-i18n-gloss-term>Inner Seasons</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-gloss-def>The four phases of the menstrual cycle visualized as Spring, Summer, Autumn, and Winter.</p>
+        </div>
+        <div class="glass-card p-6">
+          <h3 class="text-sm font-semibold tracking-wider uppercase mb-1" style="color: var(--accent);" data-i18n-gloss-term>Lunar Phase Syncing</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-gloss-def>Mapping menstrual cycle data against the 8 lunar phases (new moon to full moon and back).</p>
+        </div>
+        <div class="glass-card p-6">
+          <h3 class="text-sm font-semibold tracking-wider uppercase mb-1" style="color: var(--accent);" data-i18n-gloss-term>Local-First Privacy</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(232, 230, 240, 0.6);" data-i18n-gloss-def>Architecture where all user data is processed and stored on-device with no cloud transmission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ════════════════════════════════════════ -->
   <!-- FOOTER                                   -->
@@ -658,12 +740,12 @@
   <!-- TEMPLATES                                -->
   <!-- ════════════════════════════════════════ -->
   <template id="faq-template">
-    <div class="glass-card p-6 faq-item">
+    <div class="glass-card p-6 faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <div class="faq-question flex justify-between items-center">
-        <h3 class="font-display text-lg font-medium" data-i18n-item="q" style="color: var(--silver);"></h3>
+        <h3 class="font-display text-lg font-medium" data-i18n-item="q" itemprop="name" style="color: var(--silver);"></h3>
       </div>
-      <div class="faq-answer mt-3">
-        <p class="text-sm leading-relaxed" data-i18n-item="a" style="color: rgba(232, 230, 240, 0.7);"></p>
+      <div class="faq-answer mt-3" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p class="text-sm leading-relaxed" data-i18n-item="a" itemprop="text" style="color: rgba(232, 230, 240, 0.7);"></p>
       </div>
     </div>
   </template>
@@ -673,6 +755,21 @@
   <!-- ════════════════════════════════════════ -->
   <script src="/js/i18n.js"></script>
   <script>
+    // ─── Language dropdown toggle ───
+    function toggleLangDropdown() {
+      const menu = document.getElementById('lang-dropdown-menu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+    // Close dropdown on outside click
+    document.addEventListener('click', function(e) {
+      const dropdown = document.getElementById('lang-dropdown');
+      const menu = document.getElementById('lang-dropdown-menu');
+      if (dropdown && menu && !dropdown.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
     // ─── FAQ accordion ───
     (function() {
       const container = document.getElementById('faq-list');

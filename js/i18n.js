@@ -1,15 +1,23 @@
 /**
  * Luna Sync — i18n Engine
- * Path-based routing: /en/ → English, /zh/ → Chinese
+ * Path-based routing: /en/ → English, /zh/ → Chinese, /de/ → German
  * JSON-driven, zero dependencies.
  */
 
 (function () {
   'use strict';
 
+  const LANG_CONFIG = {
+    en: { label: 'English', labelNative: 'English', ogLocale: 'en_US' },
+    zh: { label: '中文', labelNative: '中文', ogLocale: 'zh_CN' },
+    de: { label: 'Deutsch', labelNative: 'Deutsch', ogLocale: 'de_DE' }
+  };
+  const LANG_ORDER = ['en', 'zh', 'de'];
+  const LANG_PATTERN = /^\/(en|zh|de)\//;
+
   // ─── Detect language from URL path ───
   const path = window.location.pathname;
-  const match = path.match(/^\/(en|zh|de)\//);
+  const match = path.match(LANG_PATTERN);
   const currentLang = match ? match[1] : 'en';
 
   // ─── Load dictionary ───
@@ -32,6 +40,12 @@
     document.title = dict.meta.title;
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', dict.meta.description);
+    // og:description
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', dict.meta.description);
+    // og:locale
+    let ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) ogLocale.setAttribute('content', LANG_CONFIG[currentLang]?.ogLocale || 'en_US');
 
     // Data-i18n elements
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -70,17 +84,20 @@
       }
     });
 
-    // Lang switch button — cycle through en → zh → de → en
-    const switchBtn = document.getElementById('lang-switch');
-    if (switchBtn) {
-      const langOrder = ['en', 'zh', 'de'];
-      const currentIdx = langOrder.indexOf(currentLang);
-      const targetLang = langOrder[(currentIdx + 1) % langOrder.length];
-      const label = dict.nav?.langSwitch || targetLang;
-      const targetPath = path.replace(/^\/(en|zh|de)\//, `/${targetLang}/`);
-      switchBtn.textContent = label;
-      switchBtn.setAttribute('href', targetPath);
+    // Lang switch dropdown — update current label
+    const currentLabel = document.getElementById('lang-current-label');
+    if (currentLabel) {
+      currentLabel.textContent = LANG_CONFIG[currentLang]?.labelNative || 'English';
     }
+    // Update dropdown items
+    document.querySelectorAll('.lang-option').forEach(el => {
+      const lang = el.getAttribute('data-lang');
+      if (lang === currentLang) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+      }
+    });
 
     // Rebuild FAQ items (data-i18n-list)
     document.querySelectorAll('[data-i18n-list]').forEach(el => {
@@ -137,6 +154,24 @@
         }
       });
     });
+
+    // Build glossary from dict
+    document.querySelectorAll('[data-i18n-glossary]').forEach(el => {
+      const keys = el.getAttribute('data-i18n-glossary').split('.');
+      let glossary = dict;
+      for (const key of keys) glossary = glossary?.[key];
+      if (!Array.isArray(glossary)) return;
+
+      const children = el.children;
+      glossary.forEach((item, i) => {
+        if (children[i]) {
+          const termEl = children[i].querySelector('[data-i18n-gloss-term]');
+          const defEl = children[i].querySelector('[data-i18n-gloss-def]');
+          if (termEl) termEl.textContent = item.term;
+          if (defEl) defEl.textContent = item.def;
+        }
+      });
+    });
   }
 
   // ─── Init ───
@@ -148,4 +183,5 @@
 
   // Expose for debugging
   window.__lunaLang = currentLang;
+  window.__lunaConfig = LANG_CONFIG;
 })();

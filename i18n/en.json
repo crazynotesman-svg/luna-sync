@@ -85,5 +85,13 @@
       "disclaimer": "Medical Disclaimer"
     },
     "copyright": "© 2026 Luna Sync. All rights reserved."
+  },
+  "glossary": {
+    "items": [
+      { "term": "Cyclical Living", "def": "Aligning daily activities with natural hormonal rhythms across the menstrual cycle." },
+      { "term": "Inner Seasons", "def": "The four phases of the menstrual cycle visualized as Spring, Summer, Autumn, and Winter." },
+      { "term": "Lunar Phase Syncing", "def": "Mapping menstrual cycle data against the 8 lunar phases (new moon to full moon and back)." },
+      { "term": "Local-First Privacy", "def": "Architecture where all user data is processed and stored on-device with no cloud transmission." }
+    ]
   }
 }
